@@ -1,0 +1,34 @@
+{
+  "name": "schematics-react",
+  "version": "1.0.0",
+  "description": "Schematics generators for React",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "yarn build && jasmine src/**/*_spec.js"
+  },
+  "keywords": [
+    "schematics",
+    "react",
+    "boilerplate",
+    "generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliy-bobrov/schematics-react.git"
+  },
+  "author": "Vitaliy Bobrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitaliy-bobrov/schematics-react/issues"
+  },
+  "homepage": "https://github.com/vitaliy-bobrov/schematics-react#readme",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^0.7.1",
+    "@angular-devkit/schematics": "^0.7.1",
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.31",
+    "jasmine": "^2.8.0",
+    "typescript": "^2.5.2"
+  }
+}

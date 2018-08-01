@@ -1,0 +1,37 @@
+import React, { Component } from 'react';<% if(!!propTypes) { %>
+import PropTypes from 'prop-types';<% }%>
+import './<%= classify(name) %>.<%= styleext %>';<% if(!!ts) { %>
+
+type Props = {
+  myProp: string;
+}<% if(!!stateful) { %>
+
+type State = Readonly<typeof initialState>
+<% }%><% }%><% if(!!stateful) { %>
+const initialState = {
+  on: false
+};<% }%>
+
+class <%= classify(name) %> extends Component<% if(!!ts) { %><Props<% if(!!stateful) { %>, State<% }%>><% }%> {<% if(!!stateful) { %>
+  <% if(!!ts) { %>readonly state = initialState;<% } else {%>
+  constructor(props) {
+    super(props);
+    this.state = initialState;
+  }<% }%><% }%>
+
+  render() {
+    const { myProp } = this.props;
+
+    return (
+      <p>
+        <%= classify(name) %> works!
+      </p>
+    );
+  }
+}<% if(!!propTypes) { %>
+
+<%= classify(name) %>.propTypes = {
+  myProp: PropTypes.string
+};<% }%>
+
+export default <%= classify(name) %>;

@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "component": {
+      "aliases": [ "c" ],
+      "factory": "./component/index#component",
+      "description": "Create a React component.",
+      "schema": "./component/schema.json"
+    }
+  }
+}
