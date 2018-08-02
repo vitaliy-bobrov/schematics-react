@@ -4,9 +4,9 @@ import './<%= classify(name) %>.<%= styleext %>';<% if(!!ts) { %>
 
 type Props = {
   myProp: string;
-}<% if(!!stateful) { %>
+};<% if(!!stateful) { %>
 
-type State = Readonly<typeof initialState>
+type State = Readonly<typeof initialState>;
 <% }%><% }%><% if(!!stateful) { %>
 const initialState = {
   on: false

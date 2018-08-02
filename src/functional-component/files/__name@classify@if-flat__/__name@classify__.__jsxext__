@@ -1,0 +1,20 @@
+import React<% if(!!ts) { %>, { SFC }<% }%> from 'react';<% if(!!propTypes) { %>
+import PropTypes from 'prop-types';<% }%>
+import './<%= classify(name) %>.<%= styleext %>';<% if(!!ts) { %>
+
+type Props = {
+  myProp: string;
+};<% }%>
+
+const <%= classify(name) %><% if(!!ts) { %>: SFC<Props><% }%> = ({ myProp, children }) => (
+  <p>
+    <%= classify(name) %> works!
+    {children}
+  </p>
+);<% if(!!propTypes) { %>
+
+<%= classify(name) %>.propTypes = {
+  myProp: PropTypes.string
+};<% }%>
+
+export default <%= classify(name) %>;

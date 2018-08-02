@@ -6,6 +6,12 @@
       "factory": "./component/index#component",
       "description": "Create a React component.",
       "schema": "./component/schema.json"
+    },
+    "functional-component": {
+      "aliases": [ "fc" ],
+      "factory": "./functional-component/index#functionalComponent",
+      "description": "Create a functional React component.",
+      "schema": "./functional-component/schema.json"
     }
   }
 }
