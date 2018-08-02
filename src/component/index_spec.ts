@@ -8,8 +8,8 @@ const defaultOptions: ComponentOptions = {
   name: 'test',
   path: '/bar',
   styleext: 'css',
-  spec: true,
-  flat: true,
+  noSpec: false,
+  subfolder: false,
   propTypes: false,
   stateful: false,
   ts: false
@@ -44,7 +44,7 @@ describe('component', () => {
 
   it('omits test file creation', () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = runner.runSchematic('component', {...defaultOptions, spec: false}, Tree.empty());
+    const tree = runner.runSchematic('component', {...defaultOptions, noSpec: true}, Tree.empty());
 
     expect(tree.files.length).toEqual(2);
     expect(tree.files.sort()).toEqual(['/bar/Test.css', '/bar/Test.js']);
@@ -52,7 +52,7 @@ describe('component', () => {
 
   it('creates subfoler', () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = runner.runSchematic('component', {...defaultOptions, flat: false}, Tree.empty());
+    const tree = runner.runSchematic('component', {...defaultOptions, subfolder: true}, Tree.empty());
 
     expect(tree.files.length).toEqual(3);
     expect(tree.files.sort()).toEqual(['/bar/Test/Test.css', '/bar/Test/Test.js', '/bar/Test/Test.test.js']);

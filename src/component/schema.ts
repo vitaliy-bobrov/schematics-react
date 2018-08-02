@@ -14,11 +14,11 @@ export interface Schema {
   /**
    * Specifies if a spec file is generated.
    */
-  spec?: boolean;
+  noSpec?: boolean;
   /**
    * Flag to indicate if a dir is created.
    */
-  flat?: boolean;
+  subfolder?: boolean;
   /**
    * Specifies if a propTypes used.
    */

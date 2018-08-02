@@ -23,15 +23,15 @@
       "type": "string",
       "default": "css"
     },
-    "spec": {
+    "noSpec": {
       "type": "boolean",
       "description": "Specifies if a spec file is generated.",
-      "default": true
+      "default": false
     },
-    "flat": {
+    "subfolder": {
       "type": "boolean",
       "description": "Flag to indicate if a dir is created.",
-      "default": true
+      "default": false
     },
     "propTypes": {
       "type": "boolean",

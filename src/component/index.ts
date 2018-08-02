@@ -17,10 +17,10 @@ export function component(options: ComponentOptions): Rule {
   validateName(options.name);
 
   const templateSource = apply(url('./files'), [
-    options.spec ? noop() : filter(path => !path.endsWith('.test.__jsext__')),
+    options.noSpec ? filter(path => !path.endsWith('.test.__jsext__')) : noop(),
     template({
       ...strings,
-      'if-flat': (s: string) => options.flat ? '' : s,
+      'if-flat': (s: string) => options.subfolder ? s : '',
       jsext: !!options.ts ? 'ts' : 'js',
       jsxext: !!options.ts ? 'tsx' : 'js',
       ...options,
