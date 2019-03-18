@@ -24,11 +24,11 @@
   "homepage": "https://github.com/vitaliy-bobrov/schematics-react#readme",
   "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "^0.7.1",
-    "@angular-devkit/schematics": "^0.7.1",
-    "@types/jasmine": "^2.6.0",
-    "@types/node": "^8.0.31",
-    "jasmine": "^2.8.0",
+    "@angular-devkit/core": "^7.3.6",
+    "@angular-devkit/schematics": "^7.3.6",
+    "@types/jasmine": "^3.3.11",
+    "@types/node": "^11.11.3",
+    "jasmine": "^3.3.1",
     "typescript": "^2.5.2"
   }
 }
